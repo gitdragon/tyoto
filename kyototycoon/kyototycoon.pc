@@ -1,0 +1,15 @@
+prefix=/usr/local/kt/tycoon
+exec_prefix=${prefix}
+datarootdir = ${prefix}/share
+bindir=${exec_prefix}/bin
+libdir=${exec_prefix}/lib
+libexecdir=${exec_prefix}/libexec
+includedir=${prefix}/include
+datadir=${datarootdir}
+
+Name: Kyoto Tyrant
+Description: a handy cache/storage server
+Version: 0.9.51
+Libs: -L${libdir} -lkyototycoon
+Libs.private: -lkyotocabinet -lz -lstdc++ -lresolv -lnsl -ldl -lrt -lpthread -lm -lc 
+Cflags: -I${includedir}

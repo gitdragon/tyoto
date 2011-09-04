@@ -1,0 +1,15 @@
+prefix=/usr/local/kt/cabinet
+exec_prefix=${prefix}
+datarootdir = ${prefix}/share
+bindir=${exec_prefix}/bin
+libdir=${exec_prefix}/lib
+libexecdir=${exec_prefix}/libexec
+includedir=${prefix}/include
+datadir=${datarootdir}
+
+Name: Kyoto Cabinet
+Description: a straightforward implementation of DBM
+Version: 1.2.70
+Libs: -L${libdir} -lkyotocabinet
+Libs.private: -lz -lstdc++ -lrt -lpthread -lm -lc 
+Cflags: -I${includedir}
